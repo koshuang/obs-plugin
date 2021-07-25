@@ -9,11 +9,32 @@
       rel="stylesheet"
       href="https://cdn.rawgit.com/jgthms/minireset.css/master/minireset.min.css"
     />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="container">
+      <div class="row">
+          <div class="auth" class="text-center">
+              <p>First, connect with your Twitch Account:</p>
+              <a id="auth-link">Auth</a>
+              <span id="auth-link-url"></span>
+          </div>
+          <div class="socket">
+              <textarea class="ws-output" rows="20" style="font-family:Courier;width:100%"></textarea>
+              <form id="topic-form" class="text-right form-inline" >
+                  <label id="topic-label" for="topic-text"></label>
+                  <input type="text" id="topic-text" placeholder="Topic">
+                  <button type="submit" class="btn">Listen</button>
+              </form>
+          </div>
+      </div>
+  </div>
     <div id="root"></div>
 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="module" src="./main.js"></script>
   </body>
 </html>
